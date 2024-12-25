@@ -15,7 +15,7 @@ class GroceryItem {
     return GroceryItem(
       id: json['id'],
       name: json['name'],
-      price: json['price'],
+      price: (json['price'] as num).toDouble(),
       image: json['image'],
     );
   }

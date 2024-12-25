@@ -6,21 +6,24 @@ import 'package:provider/provider.dart';
 import '../providers/cart_provider.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   Future<List<GroceryItem>> fetchItems(BuildContext context) async {
-    final jsonString = await DefaultAssetBundle.of(context)
-        .loadString('assets/grocery_items.json');
-    final List<dynamic> jsonList = json.decode(jsonString);
-    return jsonList.map((json) => GroceryItem.fromJson(json)).toList();
-  }
+  final jsonString =
+      await DefaultAssetBundle.of(context).loadString('assets/grocery_items.json');
+  final List<dynamic> jsonList = json.decode(jsonString);
+  return jsonList.map((json) => GroceryItem.fromJson(json)).toList();
+}
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Grocery Store'),
+        title: const Text('Grocery Store'),
         actions: [
           IconButton(
-            icon: Icon(Icons.shopping_cart),
+            icon: const Icon(Icons.shopping_cart),
             onPressed: () {
               Navigator.push(
                 context,
@@ -68,11 +71,11 @@ class HomeScreen extends StatelessWidget {
                 leading: Hero(
                   tag: 'item-${item.id}',
                   child: CircleAvatar(
-                    backgroundImage: AssetImage('assets/${item.image}'),
+                    backgroundImage: AssetImage('assets/images/${item.image}'),
                   ),
                 ),
                 title: Text(item.name),
-                subtitle: Text('\$${item.price.toStringAsFixed(2)}'),
+                subtitle: Text('\$Rs.{item.price.toStringAsFixed(2)}'),
                 trailing: IconButton(
                   icon: Icon(Icons.add),
                   onPressed: () {

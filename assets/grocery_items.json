@@ -1,4 +1,8 @@
 [
-    {"id": 1, "name": "Apple", "price": 1.2, "image": "apple.png"},
-    {"id": 2, "name": "Bread", "price": 2.5, "image": "bread.png"}
+    {"id": 1, "name": "Apple", "price": 100, "image": "apple.jpg"},
+    {"id": 2, "name": "Bread", "price": 150, "image": "bread.jpg"},
+    {"id": 3, "name": "cheese", "price": 350, "image": "cheese.jpg"},
+    {"id": 4, "name": "Anchor", "price": 750, "image": "anchor.png"},
+    {"id": 5, "name": "Cocacola", "price": 150, "image": "cocacola.webp"},
+    {"id": 6, "name": "Potato chips", "price": 250, "image": "potato chips.jpg"}
 ]
