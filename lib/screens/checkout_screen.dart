@@ -56,16 +56,16 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                   final item = cartProvider.cartItems[index];
                   return ListTile(
                     leading: CircleAvatar(
-                      backgroundImage: AssetImage('assets/${item.image}'),
+                      backgroundImage: AssetImage('assets/images/${item.image}'),
                     ),
                     title: Text(item.name),
-                    subtitle: Text('\$${item.price.toStringAsFixed(2)}'),
+                    subtitle: Text('\Rs.${item.price.toStringAsFixed(2)}'),
                   );
                 },
               ),
             ),
             Text(
-              'Total: \$${cartProvider.totalPrice.toStringAsFixed(2)}',
+              'Total: \Rs.${cartProvider.totalPrice.toStringAsFixed(2)}',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,

@@ -27,11 +27,11 @@ class CartScreen extends StatelessWidget {
                         leading: Hero(
                           tag: 'item-${item.id}',
                           child: CircleAvatar(
-                            backgroundImage: AssetImage('assets/${item.image}'),
+                            backgroundImage: AssetImage('assets/images/${item.image}'),
                           ),
                         ),
                         title: Text(item.name),
-                        subtitle: Text('\$${item.price.toStringAsFixed(2)}'),
+                        subtitle: Text('\Rs.${item.price.toStringAsFixed(2)}'),
                         trailing: IconButton(
                           icon: Icon(Icons.remove),
                           onPressed: () {
@@ -48,7 +48,7 @@ class CartScreen extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       Text(
-                        'Total: \$${cartProvider.totalPrice.toStringAsFixed(2)}',
+                        'Total: \Rs.${cartProvider.totalPrice.toStringAsFixed(2)}',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
